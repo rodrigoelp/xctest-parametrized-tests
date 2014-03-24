@@ -6,8 +6,16 @@ KNMParametrizedTest adds support for parametrized test cases using the XCTest fr
     - (void)testExample:(NSString *)word
     {
     	NSString *result = [myUppercaser uppercaseString:word];
-        XCTAssertEqualObjects(result, [word uppercaseString], @"Uppercaser failed for word %@", word);
+        XCTAssertEqualObjects(result, [word uppercaseString],
+                              @"Uppercaser failed for word %@", word);
     }
+
+
+## Installation
+
+The easiest way is using [CocoaPods](http://cocoapods.org). Just add the following to your Podfile for your testing target.
+
+    pod 'KNMParametrizedTest'
 
 
 ## Declaring a Parametrized Test
@@ -15,6 +23,7 @@ KNMParametrizedTest adds support for parametrized test cases using the XCTest fr
 
 A parametrized test is declared just like a regular unit test method, but takes a single argument which is then used to pass the parameter in. So a parametrized test must:
 
+ * be an instance method
  * return `void`
  * start with `test`
  * and have exactly 1 argument
@@ -68,7 +77,7 @@ If you want to provide `nil` as a parameter use the `NIL` macro.
         return @[ @"", NIL ];
     }
 
-***Note:** If you return `[NSNull null]` as a parameter it will not be converted to `nil`.*
+***Note:** If you return `[NSNull null]` as a parameter it will be passed as is and not converted to `nil`.*
 
 
 ### Scalar and Struct Parameters
@@ -105,3 +114,13 @@ If you want to minimize typing you can use some shorthand macros. To provide par
     }
 
 This keeps the parameters and the test together without cluttering the test too much. Also the macro checks wether the referenced test actually exists. If it doesn't, the compiler will warn you.
+
+
+## Shorthands
+
+There are some unprefixed macros declared (e.g. `NIL`). If you run into problems with those macros, add `#define KNM_PARAM_NO_SHORTHAND` before you import any KNMParametrizedTest header.
+
+    #define KNM_PARAM_NO_SHORTHAND
+    #import <KNMParametrizedTest/KNMParametrizedTest.h>
+
+This will disable the unprefixed macros. You need to prefix them with `knm_` in this case (e.g. `knm_NIL`).
