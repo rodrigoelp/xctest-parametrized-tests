@@ -53,7 +53,7 @@
 {
     NSMutableArray *parametrizedInvocations = [NSMutableArray array];
     
-    NSArray *selectors = [[KNMParametrizedTestCaseScanner scanner] selectorsForParametrizedTestCasesInClass:self];
+    NSArray *selectors = [[KNMParametrizedTestCaseScanner scanner] selectorsForParametrizedTestsInClass:self];
     for (NSString *selectorName in selectors) {
         SEL selector = NSSelectorFromString(selectorName);
         [parametrizedInvocations addObjectsFromArray:[self knm_invocationsForParametrizedTestCaseWithSelector:selector]];
@@ -103,7 +103,13 @@
 
 + (NSArray *)parametersForTestCaseWithSelector:(SEL)selector
 {
-    return nil;
+    SEL providerSelector = [[KNMParametrizedTestCaseScanner scanner] parameterProviderForTestWithSelector:selector inClass:self];
+    if (providerSelector == NULL) {
+        return @[];
+    }
+    
+    IMP provider = [self methodForSelector:providerSelector];
+    return ((id (*)(id, SEL))provider)(self, providerSelector);
 }
 
 @end

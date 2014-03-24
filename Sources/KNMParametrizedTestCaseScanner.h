@@ -13,6 +13,8 @@
 
 + (instancetype)scanner;
 
-- (NSArray *)selectorsForParametrizedTestCasesInClass:(Class)cls;
+- (NSArray *)selectorsForParametrizedTestsInClass:(Class)cls;
+
+- (SEL)parameterProviderForTestWithSelector:(SEL)testSelector inClass:(Class)cls;
 
 @end

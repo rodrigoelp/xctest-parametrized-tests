@@ -26,9 +26,9 @@
 }
 
 
-#pragma mark - Scanning
+#pragma mark - Scanning For Tests
 
-- (NSArray *)selectorsForParametrizedTestCasesInClass:(Class)cls
+- (NSArray *)selectorsForParametrizedTestsInClass:(Class)cls
 {
     NSMutableArray *selectors = [NSMutableArray array];
     
@@ -50,6 +50,32 @@
     NSUInteger argCount = method_getNumberOfArguments(method);
     
     return ([methodName hasPrefix:@"test"] && argCount == 3);
+}
+
+
+#pragma mark - Scanning For Parameter Providers
+
+- (SEL)parameterProviderForTestWithSelector:(SEL)testSelector inClass:(Class)cls
+{
+    NSParameterAssert([NSStringFromSelector(testSelector) hasPrefix:@"test"] && [NSStringFromSelector(testSelector) hasSuffix:@":"]);
+    
+    NSString *testName = [NSStringFromSelector(testSelector) substringToIndex:(NSStringFromSelector(testSelector).length - 1)];
+    
+    // check for +parametersFor<TestName>
+    NSString *uppercaseTestName = [[[testName substringToIndex:1] uppercaseString] stringByAppendingString:[testName substringFromIndex:1]];
+    SEL humanSelector = NSSelectorFromString([@"parametersFor" stringByAppendingString:uppercaseTestName]);
+    if ([(id)cls respondsToSelector:humanSelector]) {
+        return humanSelector;
+    }
+    
+    // check for +parametersFor_<testName> as well, since this is easier for macros to generate than the above
+    SEL macroSelector = NSSelectorFromString([@"parametersFor_" stringByAppendingString:testName]);
+    if ([(id)cls respondsToSelector:macroSelector]) {
+        return macroSelector;
+    }
+    
+    // no supported method found
+    return NULL;
 }
 
 @end
