@@ -22,6 +22,8 @@
     class_getClassMethod((CLS), (S2))\
 )
 
+static NSUInteger KNMInvocationIndexKey;
+
 
 @implementation XCTestCase (KNMParametrizedTests)
 
@@ -56,7 +58,7 @@
     NSArray *selectors = [[KNMParametrizedTestCaseScanner scanner] selectorsForParametrizedTestsInClass:self];
     for (NSString *selectorName in selectors) {
         SEL selector = NSSelectorFromString(selectorName);
-        [parametrizedInvocations addObjectsFromArray:[self knm_invocationsForParametrizedTestCaseWithSelector:selector]];
+        [parametrizedInvocations addObjectsFromArray:[self knm_invocationsForParametrizedTestWithSelector:selector]];
     }
     
     return parametrizedInvocations;
@@ -70,18 +72,20 @@
     return ([methodName hasPrefix:@"test"] && argCount == 1);
 }
 
-+ (NSArray *)knm_invocationsForParametrizedTestCaseWithSelector:(SEL)selector
++ (NSArray *)knm_invocationsForParametrizedTestWithSelector:(SEL)selector
 {
-    NSArray *parameters = [self parametersForTestCaseWithSelector:selector];
+    NSArray *parameters = [self parametersForTestWithSelector:selector];
     NSMutableArray *invocations = [NSMutableArray array];
     
-    for (id parameter in parameters) {
+    [parameters enumerateObjectsUsingBlock:^(id parameter, NSUInteger idx, BOOL *stop) {
         NSMethodSignature *signature = [self instanceMethodSignatureForSelector:selector];
         NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:signature];
         invocation.selector = selector;
         [invocation setArgument:(void *)&parameter atIndex:2];
         [invocations addObject:invocation];
-    }
+        
+        objc_setAssociatedObject(invocation, &KNMInvocationIndexKey, @(idx), OBJC_ASSOCIATION_COPY_NONATOMIC);
+    }];
     
     return invocations;
 }
@@ -91,17 +95,23 @@
 
 - (NSString *)knm_name
 {
+    NSInvocation *invocation = [self invocation];
+    if (![NSStringFromSelector(invocation.selector) hasSuffix:@":"]) {
+        return [self knm_name]; // original name
+    }
+    
     // make sure the name does not have the : in it, otherwise Xcode won't display errors for this test
+    // also add the test index to make the name unique
     NSString *name = [self knm_name];
-    return ([name hasSuffix:@":]"]
-            ? [[name substringToIndex:(name.length - 2)] stringByAppendingString:@"]"]
-            : name);
+    NSUInteger idx = [objc_getAssociatedObject(invocation, &KNMInvocationIndexKey) unsignedIntegerValue];
+    NSString *identifier = [NSString stringWithFormat:@"_%lu", (unsigned long)idx];
+    return [name stringByReplacingCharactersInRange:NSMakeRange((name.length - 2), 1) withString:identifier];
 }
 
 
 #pragma mark - Getting Parameters
 
-+ (NSArray *)parametersForTestCaseWithSelector:(SEL)selector
++ (NSArray *)parametersForTestWithSelector:(SEL)selector
 {
     SEL providerSelector = [[KNMParametrizedTestCaseScanner scanner] parameterProviderForTestWithSelector:selector inClass:self];
     if (providerSelector == NULL) {

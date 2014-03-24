@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6397E8FB18E09F5E00F44AEE /* KNMParametrizedTestsMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 6397E8FA18E09F5E00F44AEE /* KNMParametrizedTestsMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		63B0978F18E0703F0046E703 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63EDCE5818E056D4002746A8 /* XCTest.framework */; };
 		63B0979218E0751F0046E703 /* KNMParametrizedTestCaseScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B0979118E0751F0046E703 /* KNMParametrizedTestCaseScanner.m */; };
 		63B0979618E07EAE0046E703 /* XCTestCase+KNMParametrizedTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B0978D18E06FF60046E703 /* XCTestCase+KNMParametrizedTests.m */; };
@@ -31,6 +32,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6397E8FA18E09F5E00F44AEE /* KNMParametrizedTestsMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KNMParametrizedTestsMacros.h; sourceTree = "<group>"; };
 		63B0978C18E06FF60046E703 /* XCTestCase+KNMParametrizedTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCTestCase+KNMParametrizedTests.h"; sourceTree = "<group>"; };
 		63B0978D18E06FF60046E703 /* XCTestCase+KNMParametrizedTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "XCTestCase+KNMParametrizedTests.m"; sourceTree = "<group>"; };
 		63B0979018E0751F0046E703 /* KNMParametrizedTestCaseScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KNMParametrizedTestCaseScanner.h; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 			children = (
 				63EDCE4E18E056D4002746A8 /* Prefix.pch */,
 				63B0979A18E07F090046E703 /* KNMParametrizedTests.h */,
+				6397E8FA18E09F5E00F44AEE /* KNMParametrizedTestsMacros.h */,
 				63B0978C18E06FF60046E703 /* XCTestCase+KNMParametrizedTests.h */,
 				63B0978D18E06FF60046E703 /* XCTestCase+KNMParametrizedTests.m */,
 				63B0979018E0751F0046E703 /* KNMParametrizedTestCaseScanner.h */,
@@ -141,6 +144,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6397E8FB18E09F5E00F44AEE /* KNMParametrizedTestsMacros.h in Headers */,
 				63B0979918E07EF50046E703 /* KNMParametrizedTestCaseScanner.h in Headers */,
 				63B0979B18E07F090046E703 /* KNMParametrizedTests.h in Headers */,
 				63B0979818E07EEE0046E703 /* XCTestCase+KNMParametrizedTests.h in Headers */,

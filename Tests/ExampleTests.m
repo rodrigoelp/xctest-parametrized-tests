@@ -23,19 +23,19 @@
 
 // You can provide parameters by overriding +parametersForTestCaseWithSelector:
 
-+ (NSArray *)parametersForTestCaseWithSelector:(SEL)selector
++ (NSArray *)parametersForTestWithSelector:(SEL)selector
 {
     if (selector == @selector(testWithParameters_V1:)) {
-        return @[ @10, @20, @30, @40 ];
+        return @[ @"Hello", @"World" ];
     }
     else {
-        return [super parametersForTestCaseWithSelector:selector];
+        return [super parametersForTestWithSelector:selector];
     }
 }
 
-- (void)testWithParameters_V1:(NSNumber *)parameter
+- (void)testWithParameters_V1:(NSString *)parameter
 {
-    XCTAssert([parameter unsignedIntegerValue] >= 10, @"Should be greater than 10");
+    XCTAssert([parameter length] < 10, @"Should be shorter than 10 chars");
 }
 
 
@@ -52,10 +52,18 @@
 }
 
 
-// This is equivalent to above
+// There is a macro to provide the parameters
 
 KNMParametersFor(testWithParameters_V3, @[ @"Hello", @"World" ])
 - (void)testWithParameters_V3:(NSString *)parameter
+{
+    XCTAssert([parameter length] < 10, @"Should be shorter than 10 chars");
+}
+
+
+// you can also use the KNMParametrizedTest macro to shorten it even more
+
+KNMParametrizedTest(testWithParameters_V4 withParameter (NSString *parameter) fromList (@"Hello", @"World"))
 {
     XCTAssert([parameter length] < 10, @"Should be shorter than 10 chars");
 }
