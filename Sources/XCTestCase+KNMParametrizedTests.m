@@ -9,7 +9,7 @@
 #import "XCTestCase+KNMParametrizedTests.h"
 #import "KNMParametrizedTestCaseScanner.h"
 #import "KNMInvocationBuilder.h"
-
+#import "KNMParametrizedTestsValues.h"
 
 #import <objc/runtime.h>
 
@@ -111,7 +111,7 @@ static NSUInteger KNMInvocationIndexKey;
 {
     SEL providerSelector = [[KNMParametrizedTestCaseScanner scanner] parameterProviderForTestWithSelector:selector inClass:self];
     if (providerSelector == NULL) {
-        return @[];
+        return @[ knm_NIL ];
     }
     
     IMP provider = [self methodForSelector:providerSelector];

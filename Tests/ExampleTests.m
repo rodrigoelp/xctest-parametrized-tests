@@ -63,7 +63,7 @@ KNMParametersFor(testWithParameters_V3, @[ @"Hello", @"World" ])
 
 // you can also use the KNMParametrizedTest macro to shorten it even more
 
-KNMParametrizedTest(testWithParameters_V4 withParameter (NSString *parameter) fromList (@"Hello", @"World"))
+KNMParametrizedTest(testWithParameters_V4 withParameter (NSString*, parameter) fromList @[ @"Hello", @"World" ])
 {
     XCTAssert([parameter length] < 10, @"Should be shorter than 10 chars");
 }

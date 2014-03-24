@@ -13,17 +13,15 @@
     + (NSArray *)parametersFor_ ## TEST { return PARAMS, ##__VA_ARGS__ ; }
 
 
-#define KNMParametrizedTest(...) _KNMParametrizedTest(__VA_ARGS__)
-#define knm_withParameter(PARAM) , PARAM
-#define knm_fromList(...)        , (@[ __VA_ARGS__ ])
+#define KNMParametrizedTest(...) _KNMParametrizedTest(__VA_ARGS__))
+#define knm_withParameter(TYPE, PARAM) , TYPE, PARAM
+#define knm_fromList                   , (
 
 #ifndef KNM_PARAM_NO_SHORTHAND
-    #define withParameter(PARAM) knm_withParameter(PARAM)
-    #define fromList(...)        knm_fromList(__VA_ARGS__)
+    #define withParameter(TYPE, PARAM) knm_withParameter(TYPE, PARAM)
+    #define fromList                   knm_fromList
 #endif
 
-#define _KNMParametrizedTest(TEST, PARAM, PARAMS)\
+#define _KNMParametrizedTest(TEST, TYPE, PARAM, PARAMS)\
     KNMParametersFor(TEST, PARAMS)\
-    static void TEST ## _knm_executor(id self, SEL _cmd, PARAM);\
-    - (void)TEST:(id)_knm_param { TEST ## _knm_executor(self, _cmd, _knm_param); }\
-    static void TEST ## _knm_executor(id self, SEL _cmd, PARAM)
+    - (void)TEST:(TYPE)PARAM
