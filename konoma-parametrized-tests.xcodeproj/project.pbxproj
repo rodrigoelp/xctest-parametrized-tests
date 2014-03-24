@@ -7,14 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		63B0978F18E0703F0046E703 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63EDCE5818E056D4002746A8 /* XCTest.framework */; };
+		63B0979218E0751F0046E703 /* KNMParametrizedTestCaseScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B0979118E0751F0046E703 /* KNMParametrizedTestCaseScanner.m */; };
+		63B0979618E07EAE0046E703 /* XCTestCase+KNMParametrizedTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B0978D18E06FF60046E703 /* XCTestCase+KNMParametrizedTests.m */; };
+		63B0979818E07EEE0046E703 /* XCTestCase+KNMParametrizedTests.h in Headers */ = {isa = PBXBuildFile; fileRef = 63B0978C18E06FF60046E703 /* XCTestCase+KNMParametrizedTests.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		63B0979918E07EF50046E703 /* KNMParametrizedTestCaseScanner.h in Headers */ = {isa = PBXBuildFile; fileRef = 63B0979018E0751F0046E703 /* KNMParametrizedTestCaseScanner.h */; };
+		63B0979B18E07F090046E703 /* KNMParametrizedTests.h in Headers */ = {isa = PBXBuildFile; fileRef = 63B0979A18E07F090046E703 /* KNMParametrizedTests.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		63EDCE4B18E056D4002746A8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63EDCE4A18E056D4002746A8 /* Foundation.framework */; };
-		63EDCE5018E056D4002746A8 /* konoma_parametrized_tests.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 63EDCE4F18E056D4002746A8 /* konoma_parametrized_tests.h */; };
-		63EDCE5218E056D4002746A8 /* konoma_parametrized_tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 63EDCE5118E056D4002746A8 /* konoma_parametrized_tests.m */; };
 		63EDCE5918E056D4002746A8 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63EDCE5818E056D4002746A8 /* XCTest.framework */; };
 		63EDCE5A18E056D4002746A8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63EDCE4A18E056D4002746A8 /* Foundation.framework */; };
-		63EDCE5C18E056D4002746A8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63EDCE5B18E056D4002746A8 /* UIKit.framework */; };
 		63EDCE5F18E056D4002746A8 /* libkonoma-parametrized-tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 63EDCE4718E056D4002746A8 /* libkonoma-parametrized-tests.a */; };
-		63EDCE6718E056D4002746A8 /* konoma_parametrized_testsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 63EDCE6618E056D4002746A8 /* konoma_parametrized_testsTests.m */; };
+		63EDCE6718E056D4002746A8 /* ExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 63EDCE6618E056D4002746A8 /* ExampleTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,30 +30,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		63EDCE4518E056D4002746A8 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "include/$(PRODUCT_NAME)";
-			dstSubfolderSpec = 16;
-			files = (
-				63EDCE5018E056D4002746A8 /* konoma_parametrized_tests.h in CopyFiles */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
+		63B0978C18E06FF60046E703 /* XCTestCase+KNMParametrizedTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCTestCase+KNMParametrizedTests.h"; sourceTree = "<group>"; };
+		63B0978D18E06FF60046E703 /* XCTestCase+KNMParametrizedTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "XCTestCase+KNMParametrizedTests.m"; sourceTree = "<group>"; };
+		63B0979018E0751F0046E703 /* KNMParametrizedTestCaseScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KNMParametrizedTestCaseScanner.h; sourceTree = "<group>"; };
+		63B0979118E0751F0046E703 /* KNMParametrizedTestCaseScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KNMParametrizedTestCaseScanner.m; sourceTree = "<group>"; };
+		63B0979A18E07F090046E703 /* KNMParametrizedTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KNMParametrizedTests.h; sourceTree = "<group>"; };
 		63EDCE4718E056D4002746A8 /* libkonoma-parametrized-tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libkonoma-parametrized-tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		63EDCE4A18E056D4002746A8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		63EDCE4E18E056D4002746A8 /* Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
-		63EDCE4F18E056D4002746A8 /* konoma_parametrized_tests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = konoma_parametrized_tests.h; sourceTree = "<group>"; };
-		63EDCE5118E056D4002746A8 /* konoma_parametrized_tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = konoma_parametrized_tests.m; sourceTree = "<group>"; };
 		63EDCE5718E056D4002746A8 /* konoma-parametrized-tests-tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "konoma-parametrized-tests-tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		63EDCE5818E056D4002746A8 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		63EDCE5B18E056D4002746A8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		63EDCE6218E056D4002746A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		63EDCE6618E056D4002746A8 /* konoma_parametrized_testsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = konoma_parametrized_testsTests.m; sourceTree = "<group>"; };
+		63EDCE6618E056D4002746A8 /* ExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExampleTests.m; sourceTree = "<group>"; };
 		63EDCE7018E0580A002746A8 /* Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -60,6 +53,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				63EDCE4B18E056D4002746A8 /* Foundation.framework in Frameworks */,
+				63B0978F18E0703F0046E703 /* XCTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,10 +61,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				63EDCE5918E056D4002746A8 /* XCTest.framework in Frameworks */,
-				63EDCE5C18E056D4002746A8 /* UIKit.framework in Frameworks */,
 				63EDCE5F18E056D4002746A8 /* libkonoma-parametrized-tests.a in Frameworks */,
 				63EDCE5A18E056D4002746A8 /* Foundation.framework in Frameworks */,
+				63EDCE5918E056D4002746A8 /* XCTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,8 +103,11 @@
 			isa = PBXGroup;
 			children = (
 				63EDCE4E18E056D4002746A8 /* Prefix.pch */,
-				63EDCE4F18E056D4002746A8 /* konoma_parametrized_tests.h */,
-				63EDCE5118E056D4002746A8 /* konoma_parametrized_tests.m */,
+				63B0979A18E07F090046E703 /* KNMParametrizedTests.h */,
+				63B0978C18E06FF60046E703 /* XCTestCase+KNMParametrizedTests.h */,
+				63B0978D18E06FF60046E703 /* XCTestCase+KNMParametrizedTests.m */,
+				63B0979018E0751F0046E703 /* KNMParametrizedTestCaseScanner.h */,
+				63B0979118E0751F0046E703 /* KNMParametrizedTestCaseScanner.m */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -121,20 +117,25 @@
 			children = (
 				63EDCE6218E056D4002746A8 /* Info.plist */,
 				63EDCE7018E0580A002746A8 /* Prefix.pch */,
-				63EDCE6618E056D4002746A8 /* konoma_parametrized_testsTests.m */,
-				63EDCE6118E056D4002746A8 /* Supporting Files */,
+				63EDCE6618E056D4002746A8 /* ExampleTests.m */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
 		};
-		63EDCE6118E056D4002746A8 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		63B0979718E07EE90046E703 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63B0979918E07EF50046E703 /* KNMParametrizedTestCaseScanner.h in Headers */,
+				63B0979B18E07F090046E703 /* KNMParametrizedTests.h in Headers */,
+				63B0979818E07EEE0046E703 /* XCTestCase+KNMParametrizedTests.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		63EDCE4618E056D4002746A8 /* konoma-parametrized-tests */ = {
@@ -143,7 +144,7 @@
 			buildPhases = (
 				63EDCE4318E056D4002746A8 /* Sources */,
 				63EDCE4418E056D4002746A8 /* Frameworks */,
-				63EDCE4518E056D4002746A8 /* CopyFiles */,
+				63B0979718E07EE90046E703 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -214,7 +215,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				63EDCE5218E056D4002746A8 /* konoma_parametrized_tests.m in Sources */,
+				63B0979218E0751F0046E703 /* KNMParametrizedTestCaseScanner.m in Sources */,
+				63B0979618E07EAE0046E703 /* XCTestCase+KNMParametrizedTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,7 +224,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				63EDCE6718E056D4002746A8 /* konoma_parametrized_testsTests.m in Sources */,
+				63EDCE6718E056D4002746A8 /* ExampleTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,7 +264,9 @@
 					"$(inherited)",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
@@ -293,7 +297,9 @@
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
@@ -309,10 +315,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DSTROOT = /tmp/konoma_parametrized_tests.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Sources/Prefix.pch;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = include/KNMParametrizedTests;
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -321,10 +332,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DSTROOT = /tmp/konoma_parametrized_tests.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Sources/Prefix.pch;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = include/KNMParametrizedTests;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -344,6 +360,12 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = Tests/Info.plist;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					XCTest,
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -360,6 +382,12 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Tests/Prefix.pch;
 				INFOPLIST_FILE = Tests/Info.plist;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					XCTest,
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -384,6 +412,7 @@
 				63EDCE6C18E056D4002746A8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		63EDCE6D18E056D4002746A8 /* Build configuration list for PBXNativeTarget "konoma-parametrized-tests-tests" */ = {
 			isa = XCConfigurationList;
@@ -392,6 +421,7 @@
 				63EDCE6F18E056D4002746A8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
