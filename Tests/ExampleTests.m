@@ -77,4 +77,19 @@ KNMParametersFor(testWithParameters_V5, @[ @"", NIL ])
     XCTAssert([parameter length] == 0, @"Should be exactly 0 chars");
 }
 
+
+// scalar and struct types are automatically coerced
+
+KNMParametersFor(testWithParameters_V6, @[ @10, @20 ])
+- (void)testWithParameters_V6:(NSUInteger)parameter
+{
+    XCTAssert(parameter >= 10, @"Should be bigger or equal 10 (was %lu)", (unsigned long)parameter);
+}
+
+KNMParametersFor(testWithParameters_V7, @[ VALUE(NSMakeRange(10, 10)), VALUE(NSMakeRange(20, 20)) ])
+- (void)testWithParameters_V7:(NSRange)parameter
+{
+    XCTAssert(parameter.location >= 10, @"Should be bigger or equal 10 (was %lu)", (unsigned long)parameter.location);
+}
+
 @end

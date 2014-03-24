@@ -6,8 +6,12 @@
 //  Copyright (c) 2014 konoma GmbH. All rights reserved.
 //
 
-#import "KNMNilValue.h"
+#import "KNMParametrizedTestsValues.h"
 
+
+#pragma mark - Nil Value Class
+
+@interface KNMNilValue : NSObject @end
 @implementation KNMNilValue
 
 + (instancetype)nilValue
@@ -21,3 +25,11 @@
 }
 
 @end
+
+
+#pragma mark - Value Helper Methods
+
+id _knm_nilValue(void)
+{
+    return [KNMNilValue nilValue];
+}
