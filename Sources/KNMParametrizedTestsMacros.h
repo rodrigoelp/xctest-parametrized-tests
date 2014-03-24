@@ -10,7 +10,7 @@
 
 
 #define KNMParametersFor(TEST, PARAMS, ...)\
-    + (NSArray *)parametersFor_ ## TEST { return PARAMS, ##__VA_ARGS__ ; }
+    + (NSArray *)parametersFor_ ## TEST { return (@selector(TEST :), PARAMS, ##__VA_ARGS__); }
 
 
 #define KNMParametrizedTest(...) _KNMParametrizedTest(__VA_ARGS__))
