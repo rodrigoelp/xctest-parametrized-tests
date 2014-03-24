@@ -1,0 +1,399 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		63EDCE4B18E056D4002746A8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63EDCE4A18E056D4002746A8 /* Foundation.framework */; };
+		63EDCE5018E056D4002746A8 /* konoma_parametrized_tests.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 63EDCE4F18E056D4002746A8 /* konoma_parametrized_tests.h */; };
+		63EDCE5218E056D4002746A8 /* konoma_parametrized_tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 63EDCE5118E056D4002746A8 /* konoma_parametrized_tests.m */; };
+		63EDCE5918E056D4002746A8 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63EDCE5818E056D4002746A8 /* XCTest.framework */; };
+		63EDCE5A18E056D4002746A8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63EDCE4A18E056D4002746A8 /* Foundation.framework */; };
+		63EDCE5C18E056D4002746A8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63EDCE5B18E056D4002746A8 /* UIKit.framework */; };
+		63EDCE5F18E056D4002746A8 /* libkonoma-parametrized-tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 63EDCE4718E056D4002746A8 /* libkonoma-parametrized-tests.a */; };
+		63EDCE6718E056D4002746A8 /* konoma_parametrized_testsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 63EDCE6618E056D4002746A8 /* konoma_parametrized_testsTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		63EDCE5D18E056D4002746A8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 63EDCE3F18E056D3002746A8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 63EDCE4618E056D4002746A8;
+			remoteInfo = "konoma-parametrized-tests";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		63EDCE4518E056D4002746A8 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				63EDCE5018E056D4002746A8 /* konoma_parametrized_tests.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		63EDCE4718E056D4002746A8 /* libkonoma-parametrized-tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libkonoma-parametrized-tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		63EDCE4A18E056D4002746A8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		63EDCE4E18E056D4002746A8 /* Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
+		63EDCE4F18E056D4002746A8 /* konoma_parametrized_tests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = konoma_parametrized_tests.h; sourceTree = "<group>"; };
+		63EDCE5118E056D4002746A8 /* konoma_parametrized_tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = konoma_parametrized_tests.m; sourceTree = "<group>"; };
+		63EDCE5718E056D4002746A8 /* konoma-parametrized-tests-tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "konoma-parametrized-tests-tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		63EDCE5818E056D4002746A8 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		63EDCE5B18E056D4002746A8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		63EDCE6218E056D4002746A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		63EDCE6618E056D4002746A8 /* konoma_parametrized_testsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = konoma_parametrized_testsTests.m; sourceTree = "<group>"; };
+		63EDCE7018E0580A002746A8 /* Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		63EDCE4418E056D4002746A8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63EDCE4B18E056D4002746A8 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63EDCE5418E056D4002746A8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63EDCE5918E056D4002746A8 /* XCTest.framework in Frameworks */,
+				63EDCE5C18E056D4002746A8 /* UIKit.framework in Frameworks */,
+				63EDCE5F18E056D4002746A8 /* libkonoma-parametrized-tests.a in Frameworks */,
+				63EDCE5A18E056D4002746A8 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		63EDCE3E18E056D3002746A8 = {
+			isa = PBXGroup;
+			children = (
+				63EDCE4C18E056D4002746A8 /* Sources */,
+				63EDCE6018E056D4002746A8 /* Tests */,
+				63EDCE4918E056D4002746A8 /* Frameworks */,
+				63EDCE4818E056D4002746A8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		63EDCE4818E056D4002746A8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				63EDCE4718E056D4002746A8 /* libkonoma-parametrized-tests.a */,
+				63EDCE5718E056D4002746A8 /* konoma-parametrized-tests-tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		63EDCE4918E056D4002746A8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				63EDCE4A18E056D4002746A8 /* Foundation.framework */,
+				63EDCE5818E056D4002746A8 /* XCTest.framework */,
+				63EDCE5B18E056D4002746A8 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		63EDCE4C18E056D4002746A8 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				63EDCE4E18E056D4002746A8 /* Prefix.pch */,
+				63EDCE4F18E056D4002746A8 /* konoma_parametrized_tests.h */,
+				63EDCE5118E056D4002746A8 /* konoma_parametrized_tests.m */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		63EDCE6018E056D4002746A8 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				63EDCE6218E056D4002746A8 /* Info.plist */,
+				63EDCE7018E0580A002746A8 /* Prefix.pch */,
+				63EDCE6618E056D4002746A8 /* konoma_parametrized_testsTests.m */,
+				63EDCE6118E056D4002746A8 /* Supporting Files */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		63EDCE6118E056D4002746A8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		63EDCE4618E056D4002746A8 /* konoma-parametrized-tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 63EDCE6A18E056D4002746A8 /* Build configuration list for PBXNativeTarget "konoma-parametrized-tests" */;
+			buildPhases = (
+				63EDCE4318E056D4002746A8 /* Sources */,
+				63EDCE4418E056D4002746A8 /* Frameworks */,
+				63EDCE4518E056D4002746A8 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "konoma-parametrized-tests";
+			productName = "konoma-parametrized-tests";
+			productReference = 63EDCE4718E056D4002746A8 /* libkonoma-parametrized-tests.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		63EDCE5618E056D4002746A8 /* konoma-parametrized-tests-tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 63EDCE6D18E056D4002746A8 /* Build configuration list for PBXNativeTarget "konoma-parametrized-tests-tests" */;
+			buildPhases = (
+				63EDCE5318E056D4002746A8 /* Sources */,
+				63EDCE5418E056D4002746A8 /* Frameworks */,
+				63EDCE5518E056D4002746A8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				63EDCE5E18E056D4002746A8 /* PBXTargetDependency */,
+			);
+			name = "konoma-parametrized-tests-tests";
+			productName = "konoma-parametrized-testsTests";
+			productReference = 63EDCE5718E056D4002746A8 /* konoma-parametrized-tests-tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		63EDCE3F18E056D3002746A8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "konoma GmbH";
+			};
+			buildConfigurationList = 63EDCE4218E056D4002746A8 /* Build configuration list for PBXProject "konoma-parametrized-tests" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 63EDCE3E18E056D3002746A8;
+			productRefGroup = 63EDCE4818E056D4002746A8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				63EDCE4618E056D4002746A8 /* konoma-parametrized-tests */,
+				63EDCE5618E056D4002746A8 /* konoma-parametrized-tests-tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		63EDCE5518E056D4002746A8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		63EDCE4318E056D4002746A8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63EDCE5218E056D4002746A8 /* konoma_parametrized_tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63EDCE5318E056D4002746A8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63EDCE6718E056D4002746A8 /* konoma_parametrized_testsTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		63EDCE5E18E056D4002746A8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 63EDCE4618E056D4002746A8 /* konoma-parametrized-tests */;
+			targetProxy = 63EDCE5D18E056D4002746A8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		63EDCE6818E056D4002746A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		63EDCE6918E056D4002746A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		63EDCE6B18E056D4002746A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/konoma_parametrized_tests.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Sources/Prefix.pch;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		63EDCE6C18E056D4002746A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/konoma_parametrized_tests.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Sources/Prefix.pch;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		63EDCE6E18E056D4002746A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Tests/Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = Tests/Info.plist;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		63EDCE6F18E056D4002746A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Tests/Prefix.pch;
+				INFOPLIST_FILE = Tests/Info.plist;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		63EDCE4218E056D4002746A8 /* Build configuration list for PBXProject "konoma-parametrized-tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63EDCE6818E056D4002746A8 /* Debug */,
+				63EDCE6918E056D4002746A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		63EDCE6A18E056D4002746A8 /* Build configuration list for PBXNativeTarget "konoma-parametrized-tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63EDCE6B18E056D4002746A8 /* Debug */,
+				63EDCE6C18E056D4002746A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		63EDCE6D18E056D4002746A8 /* Build configuration list for PBXNativeTarget "konoma-parametrized-tests-tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63EDCE6E18E056D4002746A8 /* Debug */,
+				63EDCE6F18E056D4002746A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 63EDCE3F18E056D3002746A8 /* Project object */;
+}
