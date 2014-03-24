@@ -8,6 +8,7 @@
 
 #import "XCTestCase+KNMParametrizedTests.h"
 #import "KNMParametrizedTestCaseScanner.h"
+#import "KNMNilValue.h"
 
 #import <objc/runtime.h>
 
@@ -81,10 +82,12 @@ static NSUInteger KNMInvocationIndexKey;
         NSMethodSignature *signature = [self instanceMethodSignatureForSelector:selector];
         NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:signature];
         invocation.selector = selector;
-        [invocation setArgument:(void *)&parameter atIndex:2];
-        [invocations addObject:invocation];
-        
+        if (parameter != [KNMNilValue nilValue]) {
+            [invocation setArgument:(void *)&parameter atIndex:2];
+        }
         objc_setAssociatedObject(invocation, &KNMInvocationIndexKey, @(idx), OBJC_ASSOCIATION_COPY_NONATOMIC);
+        
+        [invocations addObject:invocation];
     }];
     
     return invocations;

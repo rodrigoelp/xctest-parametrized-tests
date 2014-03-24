@@ -68,4 +68,13 @@ KNMParametrizedTest(testWithParameters_V4 withParameter (NSString *parameter) fr
     XCTAssert([parameter length] < 10, @"Should be shorter than 10 chars");
 }
 
+
+// to pass nil as a parameter use the NIL macro
+
+KNMParametersFor(testWithParameters_V5, @[ @"", NIL ])
+- (void)testWithParameters_V5:(NSString *)parameter
+{
+    XCTAssert([parameter length] == 0, @"Should be exactly 0 chars");
+}
+
 @end

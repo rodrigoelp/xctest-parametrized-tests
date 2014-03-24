@@ -10,3 +10,4 @@
 
 #import "XCTestCase+KNMParametrizedTests.h"
 #import "KNMParametrizedTestsMacros.h"
+#import "KNMNilValue.h"
