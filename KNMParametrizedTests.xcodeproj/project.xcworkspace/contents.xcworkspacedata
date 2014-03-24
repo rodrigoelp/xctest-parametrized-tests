@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:konoma-parametrized-tests.xcodeproj">
+      location = "self:KNMParametrizedTests.xcodeproj">
    </FileRef>
 </Workspace>

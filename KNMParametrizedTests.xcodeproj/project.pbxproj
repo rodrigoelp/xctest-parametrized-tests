@@ -16,7 +16,7 @@
 		63EDCE4B18E056D4002746A8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63EDCE4A18E056D4002746A8 /* Foundation.framework */; };
 		63EDCE5918E056D4002746A8 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63EDCE5818E056D4002746A8 /* XCTest.framework */; };
 		63EDCE5A18E056D4002746A8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63EDCE4A18E056D4002746A8 /* Foundation.framework */; };
-		63EDCE5F18E056D4002746A8 /* libkonoma-parametrized-tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 63EDCE4718E056D4002746A8 /* libkonoma-parametrized-tests.a */; };
+		63EDCE5F18E056D4002746A8 /* libKNMParametrizedTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 63EDCE4718E056D4002746A8 /* libKNMParametrizedTests.a */; };
 		63EDCE6718E056D4002746A8 /* ExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 63EDCE6618E056D4002746A8 /* ExampleTests.m */; };
 /* End PBXBuildFile section */
 
@@ -36,10 +36,10 @@
 		63B0979018E0751F0046E703 /* KNMParametrizedTestCaseScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KNMParametrizedTestCaseScanner.h; sourceTree = "<group>"; };
 		63B0979118E0751F0046E703 /* KNMParametrizedTestCaseScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KNMParametrizedTestCaseScanner.m; sourceTree = "<group>"; };
 		63B0979A18E07F090046E703 /* KNMParametrizedTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KNMParametrizedTests.h; sourceTree = "<group>"; };
-		63EDCE4718E056D4002746A8 /* libkonoma-parametrized-tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libkonoma-parametrized-tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		63EDCE4718E056D4002746A8 /* libKNMParametrizedTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libKNMParametrizedTests.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		63EDCE4A18E056D4002746A8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		63EDCE4E18E056D4002746A8 /* Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
-		63EDCE5718E056D4002746A8 /* konoma-parametrized-tests-tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "konoma-parametrized-tests-tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		63EDCE5718E056D4002746A8 /* KNMParametrizedTests-tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "KNMParametrizedTests-tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		63EDCE5818E056D4002746A8 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		63EDCE5B18E056D4002746A8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		63EDCE6218E056D4002746A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -61,7 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				63EDCE5F18E056D4002746A8 /* libkonoma-parametrized-tests.a in Frameworks */,
+				63EDCE5F18E056D4002746A8 /* libKNMParametrizedTests.a in Frameworks */,
 				63EDCE5A18E056D4002746A8 /* Foundation.framework in Frameworks */,
 				63EDCE5918E056D4002746A8 /* XCTest.framework in Frameworks */,
 			);
@@ -83,8 +83,8 @@
 		63EDCE4818E056D4002746A8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				63EDCE4718E056D4002746A8 /* libkonoma-parametrized-tests.a */,
-				63EDCE5718E056D4002746A8 /* konoma-parametrized-tests-tests.xctest */,
+				63EDCE4718E056D4002746A8 /* libKNMParametrizedTests.a */,
+				63EDCE5718E056D4002746A8 /* KNMParametrizedTests-tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -138,9 +138,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		63EDCE4618E056D4002746A8 /* konoma-parametrized-tests */ = {
+		63EDCE4618E056D4002746A8 /* KNMParametrizedTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 63EDCE6A18E056D4002746A8 /* Build configuration list for PBXNativeTarget "konoma-parametrized-tests" */;
+			buildConfigurationList = 63EDCE6A18E056D4002746A8 /* Build configuration list for PBXNativeTarget "KNMParametrizedTests" */;
 			buildPhases = (
 				63EDCE4318E056D4002746A8 /* Sources */,
 				63EDCE4418E056D4002746A8 /* Frameworks */,
@@ -150,14 +150,14 @@
 			);
 			dependencies = (
 			);
-			name = "konoma-parametrized-tests";
+			name = KNMParametrizedTests;
 			productName = "konoma-parametrized-tests";
-			productReference = 63EDCE4718E056D4002746A8 /* libkonoma-parametrized-tests.a */;
+			productReference = 63EDCE4718E056D4002746A8 /* libKNMParametrizedTests.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		63EDCE5618E056D4002746A8 /* konoma-parametrized-tests-tests */ = {
+		63EDCE5618E056D4002746A8 /* KNMParametrizedTests-tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 63EDCE6D18E056D4002746A8 /* Build configuration list for PBXNativeTarget "konoma-parametrized-tests-tests" */;
+			buildConfigurationList = 63EDCE6D18E056D4002746A8 /* Build configuration list for PBXNativeTarget "KNMParametrizedTests-tests" */;
 			buildPhases = (
 				63EDCE5318E056D4002746A8 /* Sources */,
 				63EDCE5418E056D4002746A8 /* Frameworks */,
@@ -168,9 +168,9 @@
 			dependencies = (
 				63EDCE5E18E056D4002746A8 /* PBXTargetDependency */,
 			);
-			name = "konoma-parametrized-tests-tests";
+			name = "KNMParametrizedTests-tests";
 			productName = "konoma-parametrized-testsTests";
-			productReference = 63EDCE5718E056D4002746A8 /* konoma-parametrized-tests-tests.xctest */;
+			productReference = 63EDCE5718E056D4002746A8 /* KNMParametrizedTests-tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -182,7 +182,7 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "konoma GmbH";
 			};
-			buildConfigurationList = 63EDCE4218E056D4002746A8 /* Build configuration list for PBXProject "konoma-parametrized-tests" */;
+			buildConfigurationList = 63EDCE4218E056D4002746A8 /* Build configuration list for PBXProject "KNMParametrizedTests" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -194,8 +194,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				63EDCE4618E056D4002746A8 /* konoma-parametrized-tests */,
-				63EDCE5618E056D4002746A8 /* konoma-parametrized-tests-tests */,
+				63EDCE4618E056D4002746A8 /* KNMParametrizedTests */,
+				63EDCE5618E056D4002746A8 /* KNMParametrizedTests-tests */,
 			);
 		};
 /* End PBXProject section */
@@ -233,7 +233,7 @@
 /* Begin PBXTargetDependency section */
 		63EDCE5E18E056D4002746A8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 63EDCE4618E056D4002746A8 /* konoma-parametrized-tests */;
+			target = 63EDCE4618E056D4002746A8 /* KNMParametrizedTests */;
 			targetProxy = 63EDCE5D18E056D4002746A8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -322,7 +322,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Sources/Prefix.pch;
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = KNMParametrizedTests;
 				PUBLIC_HEADERS_FOLDER_PATH = include/KNMParametrizedTests;
 				SKIP_INSTALL = YES;
 			};
@@ -339,7 +339,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Sources/Prefix.pch;
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = KNMParametrizedTests;
 				PUBLIC_HEADERS_FOLDER_PATH = include/KNMParametrizedTests;
 				SKIP_INSTALL = YES;
 			};
@@ -366,7 +366,7 @@
 					XCTest,
 					"-ObjC",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "KNMParametrizedTests-tests";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Debug;
@@ -388,7 +388,7 @@
 					XCTest,
 					"-ObjC",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "KNMParametrizedTests-tests";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
@@ -396,7 +396,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		63EDCE4218E056D4002746A8 /* Build configuration list for PBXProject "konoma-parametrized-tests" */ = {
+		63EDCE4218E056D4002746A8 /* Build configuration list for PBXProject "KNMParametrizedTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				63EDCE6818E056D4002746A8 /* Debug */,
@@ -405,7 +405,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		63EDCE6A18E056D4002746A8 /* Build configuration list for PBXNativeTarget "konoma-parametrized-tests" */ = {
+		63EDCE6A18E056D4002746A8 /* Build configuration list for PBXNativeTarget "KNMParametrizedTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				63EDCE6B18E056D4002746A8 /* Debug */,
@@ -414,7 +414,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		63EDCE6D18E056D4002746A8 /* Build configuration list for PBXNativeTarget "konoma-parametrized-tests-tests" */ = {
+		63EDCE6D18E056D4002746A8 /* Build configuration list for PBXNativeTarget "KNMParametrizedTests-tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				63EDCE6E18E056D4002746A8 /* Debug */,
