@@ -61,18 +61,10 @@ KNMParametersFor(testWithParameters_V3, @[ @"Hello", @"World" ])
 }
 
 
-// you can also use the KNMParametrizedTest macro to shorten it even more
-
-KNMParametrizedTest(testWithParameters_V4 withParameter (NSString*, parameter) fromList @[ @"Hello", @"World" ])
-{
-    XCTAssert([parameter length] < 10, @"Should be shorter than 10 chars");
-}
-
-
 // to pass nil as a parameter use the NIL macro
 
-KNMParametersFor(testWithParameters_V5, @[ @"", NIL ])
-- (void)testWithParameters_V5:(NSString *)parameter
+KNMParametersFor(testWithParameters_V4, @[ @"", NIL ])
+- (void)testWithParameters_V4:(NSString *)parameter
 {
     XCTAssert([parameter length] == 0, @"Should be exactly 0 chars");
 }
@@ -80,14 +72,14 @@ KNMParametersFor(testWithParameters_V5, @[ @"", NIL ])
 
 // scalar and struct types are automatically coerced
 
-KNMParametersFor(testWithParameters_V6, @[ @10, @20 ])
-- (void)testWithParameters_V6:(NSUInteger)parameter
+KNMParametersFor(testWithParameters_V5, @[ @10, @20 ])
+- (void)testWithParameters_V5:(NSUInteger)parameter
 {
     XCTAssert(parameter >= 10, @"Should be bigger or equal 10 (was %lu)", (unsigned long)parameter);
 }
 
-KNMParametersFor(testWithParameters_V7, @[ VALUE(NSMakeRange(10, 10)), VALUE(NSMakeRange(20, 20)) ])
-- (void)testWithParameters_V7:(NSRange)parameter
+KNMParametersFor(testWithParameters_V6, @[ VALUE(NSMakeRange(10, 10)), VALUE(NSMakeRange(20, 20)) ])
+- (void)testWithParameters_V6:(NSRange)parameter
 {
     XCTAssert(parameter.location >= 10, @"Should be bigger or equal 10 (was %lu)", (unsigned long)parameter.location);
 }
