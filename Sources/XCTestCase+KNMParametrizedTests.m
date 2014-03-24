@@ -8,7 +8,8 @@
 
 #import "XCTestCase+KNMParametrizedTests.h"
 #import "KNMParametrizedTestCaseScanner.h"
-#import "KNMNilValue.h"
+#import "KNMInvocationBuilder.h"
+
 
 #import <objc/runtime.h>
 
@@ -32,24 +33,30 @@ static NSUInteger KNMInvocationIndexKey;
 
 + (void)load
 {
+    // "override" -name
     SWIZZLE_INSTANCE_METHODS(self, @selector(name), @selector(knm_name));
-    SWIZZLE_CLASS_METHODS(self, @selector(testInvocations), @selector(knm_default_testInvocations));
-    SWIZZLE_CLASS_METHODS(self, @selector(testInvocations), @selector(knm_all_testInvocations));
+    
+    // "override" +testInvocations with our +knm_allTestInvocations, but backup the
+    // original +testInvocations method first into +knm_defaultTestInvocations.
+    // That's not technically necessary but it makes the methods a bit more consistent below.
+    SWIZZLE_CLASS_METHODS(self, @selector(testInvocations), @selector(knm_defaultTestInvocations));
+    SWIZZLE_CLASS_METHODS(self, @selector(testInvocations), @selector(knm_allTestInvocations));
 }
+
 
 #pragma mark - Adding Test Cases
 
-+ (NSArray *)knm_all_testInvocations
++ (NSArray *)knm_allTestInvocations
 {
     NSMutableArray *invocations = [NSMutableArray array];
-    [invocations addObjectsFromArray:[self knm_default_testInvocations]];
+    [invocations addObjectsFromArray:[self knm_defaultTestInvocations]];
     [invocations addObjectsFromArray:[self knm_parametrizedTestInvocations]];
     return invocations;
 }
 
-+ (NSArray *)knm_default_testInvocations
++ (NSArray *)knm_defaultTestInvocations
 {
-    return nil; // will be replaced by original implementation
+    return nil; // will be replaced by original implementation of +testInvocations
 }
 
 + (NSArray *)knm_parametrizedTestInvocations
@@ -58,19 +65,11 @@ static NSUInteger KNMInvocationIndexKey;
     
     NSArray *selectors = [[KNMParametrizedTestCaseScanner scanner] selectorsForParametrizedTestsInClass:self];
     for (NSString *selectorName in selectors) {
-        SEL selector = NSSelectorFromString(selectorName);
-        [parametrizedInvocations addObjectsFromArray:[self knm_invocationsForParametrizedTestWithSelector:selector]];
+        NSArray *invocations = [self knm_invocationsForParametrizedTestWithSelector:NSSelectorFromString(selectorName)];
+        [parametrizedInvocations addObjectsFromArray:invocations];
     }
     
     return parametrizedInvocations;
-}
-
-+ (BOOL)knm_isParametrizedTestMethod:(Method)method
-{
-    NSString *methodName = NSStringFromSelector(method_getName(method));
-    NSUInteger argCount = method_getNumberOfArguments(method);
-    
-    return ([methodName hasPrefix:@"test"] && argCount == 1);
 }
 
 + (NSArray *)knm_invocationsForParametrizedTestWithSelector:(SEL)selector
@@ -79,14 +78,8 @@ static NSUInteger KNMInvocationIndexKey;
     NSMutableArray *invocations = [NSMutableArray array];
     
     [parameters enumerateObjectsUsingBlock:^(id parameter, NSUInteger idx, BOOL *stop) {
-        NSMethodSignature *signature = [self instanceMethodSignatureForSelector:selector];
-        NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:signature];
-        invocation.selector = selector;
-        if (parameter != [KNMNilValue nilValue]) {
-            [invocation setArgument:(void *)&parameter atIndex:2];
-        }
+        NSInvocation *invocation = [[KNMInvocationBuilder builder] buildTestInvocationForSelector:selector inClass:self withParameter:parameter];
         objc_setAssociatedObject(invocation, &KNMInvocationIndexKey, @(idx), OBJC_ASSOCIATION_COPY_NONATOMIC);
-        
         [invocations addObject:invocation];
     }];
     
@@ -125,11 +118,4 @@ static NSUInteger KNMInvocationIndexKey;
     return ((id (*)(id, SEL))provider)(self, providerSelector);
 }
 
-@end
-
-
-@interface KNMParametrizedTestCase : NSObject
-@end
-
-@implementation KNMParametrizedTestCase
 @end

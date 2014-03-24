@@ -16,6 +16,8 @@
 		63B0979818E07EEE0046E703 /* XCTestCase+KNMParametrizedTests.h in Headers */ = {isa = PBXBuildFile; fileRef = 63B0978C18E06FF60046E703 /* XCTestCase+KNMParametrizedTests.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		63B0979918E07EF50046E703 /* KNMParametrizedTestCaseScanner.h in Headers */ = {isa = PBXBuildFile; fileRef = 63B0979018E0751F0046E703 /* KNMParametrizedTestCaseScanner.h */; };
 		63B0979B18E07F090046E703 /* KNMParametrizedTests.h in Headers */ = {isa = PBXBuildFile; fileRef = 63B0979A18E07F090046E703 /* KNMParametrizedTests.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		63B097A118E0B7160046E703 /* KNMInvocationBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = 63B0979F18E0B7160046E703 /* KNMInvocationBuilder.h */; };
+		63B097A218E0B7160046E703 /* KNMInvocationBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B097A018E0B7160046E703 /* KNMInvocationBuilder.m */; };
 		63EDCE4B18E056D4002746A8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63EDCE4A18E056D4002746A8 /* Foundation.framework */; };
 		63EDCE5918E056D4002746A8 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63EDCE5818E056D4002746A8 /* XCTest.framework */; };
 		63EDCE5A18E056D4002746A8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63EDCE4A18E056D4002746A8 /* Foundation.framework */; };
@@ -44,6 +46,8 @@
 		63B0979A18E07F090046E703 /* KNMParametrizedTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KNMParametrizedTests.h; sourceTree = "<group>"; };
 		63B0979D18E085E00046E703 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		63B0979E18E085E00046E703 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		63B0979F18E0B7160046E703 /* KNMInvocationBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KNMInvocationBuilder.h; sourceTree = "<group>"; };
+		63B097A018E0B7160046E703 /* KNMInvocationBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KNMInvocationBuilder.m; sourceTree = "<group>"; };
 		63EDCE4718E056D4002746A8 /* libKNMParametrizedTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libKNMParametrizedTests.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		63EDCE4A18E056D4002746A8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		63EDCE4E18E056D4002746A8 /* Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
@@ -129,6 +133,8 @@
 				63B0979118E0751F0046E703 /* KNMParametrizedTestCaseScanner.m */,
 				6397E8FC18E0A4FC00F44AEE /* KNMNilValue.h */,
 				6397E8FD18E0A4FC00F44AEE /* KNMNilValue.m */,
+				63B0979F18E0B7160046E703 /* KNMInvocationBuilder.h */,
+				63B097A018E0B7160046E703 /* KNMInvocationBuilder.m */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -153,6 +159,7 @@
 				6397E8FE18E0A4FC00F44AEE /* KNMNilValue.h in Headers */,
 				6397E8FB18E09F5E00F44AEE /* KNMParametrizedTestsMacros.h in Headers */,
 				63B0979918E07EF50046E703 /* KNMParametrizedTestCaseScanner.h in Headers */,
+				63B097A118E0B7160046E703 /* KNMInvocationBuilder.h in Headers */,
 				63B0979B18E07F090046E703 /* KNMParametrizedTests.h in Headers */,
 				63B0979818E07EEE0046E703 /* XCTestCase+KNMParametrizedTests.h in Headers */,
 			);
@@ -238,6 +245,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63B097A218E0B7160046E703 /* KNMInvocationBuilder.m in Sources */,
 				6397E8FF18E0A4FC00F44AEE /* KNMNilValue.m in Sources */,
 				63B0979218E0751F0046E703 /* KNMParametrizedTestCaseScanner.m in Sources */,
 				63B0979618E07EAE0046E703 /* XCTestCase+KNMParametrizedTests.m in Sources */,
