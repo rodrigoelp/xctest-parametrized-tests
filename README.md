@@ -1,4 +1,4 @@
-konoma-parametrized-tests
+KNMParametrizedTest
 =========================
 
-Parametrized test case support for tests using XCTestCase
+Parametrized test case support for tests using `XCTestCase`.
