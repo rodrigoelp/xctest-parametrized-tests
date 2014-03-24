@@ -36,6 +36,8 @@
 		63B0979018E0751F0046E703 /* KNMParametrizedTestCaseScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KNMParametrizedTestCaseScanner.h; sourceTree = "<group>"; };
 		63B0979118E0751F0046E703 /* KNMParametrizedTestCaseScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KNMParametrizedTestCaseScanner.m; sourceTree = "<group>"; };
 		63B0979A18E07F090046E703 /* KNMParametrizedTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KNMParametrizedTests.h; sourceTree = "<group>"; };
+		63B0979D18E085E00046E703 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		63B0979E18E085E00046E703 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		63EDCE4718E056D4002746A8 /* libKNMParametrizedTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libKNMParametrizedTests.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		63EDCE4A18E056D4002746A8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		63EDCE4E18E056D4002746A8 /* Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
@@ -70,11 +72,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		63B0979C18E085C80046E703 /* Documentation */ = {
+			isa = PBXGroup;
+			children = (
+				63B0979D18E085E00046E703 /* LICENSE */,
+				63B0979E18E085E00046E703 /* README.md */,
+			);
+			name = Documentation;
+			sourceTree = "<group>";
+		};
 		63EDCE3E18E056D3002746A8 = {
 			isa = PBXGroup;
 			children = (
 				63EDCE4C18E056D4002746A8 /* Sources */,
 				63EDCE6018E056D4002746A8 /* Tests */,
+				63B0979C18E085C80046E703 /* Documentation */,
 				63EDCE4918E056D4002746A8 /* Frameworks */,
 				63EDCE4818E056D4002746A8 /* Products */,
 			);
