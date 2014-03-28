@@ -78,6 +78,7 @@ KNMParametersFor(testWithParameters_V5, @[ @10, @20 ])
     XCTAssert(parameter >= 10, @"Should be bigger or equal 10 (was %lu)", (unsigned long)parameter);
 }
 
+
 KNMParametersFor(testWithParameters_V6, @[ VALUE(NSMakeRange(10, 10)), VALUE(NSMakeRange(20, 20)) ])
 - (void)testWithParameters_V6:(NSRange)parameter
 {
